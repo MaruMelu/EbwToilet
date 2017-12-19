@@ -1,0 +1,15 @@
+<p>
+  toilet status {{getStatus()}}
+</p>
+<div *ngIf="statusBusy(); else statusFree ">
+  <img src="./assets/img/busy.gif" />
+</div>
+<ng-template #statusFree>
+  <div>
+      <img src="./assets/img/free.gif" />
+  </div>
+</ng-template>
+
+<button class="btn btn-primary"  (click)="swichStatus()">{{ getLabelSwitchStatus() }}</button>
+
+<button class="btn btn-primary" >Prenota</button>
